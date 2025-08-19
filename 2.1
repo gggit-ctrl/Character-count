@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Character Counter</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      
+    }
+
+    
+    .counter-box {
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      
+    }
+
+    
+    .counter-box h2 {
+      
+      font-size: 20px;
+    }
+
+   
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    
+    .char-count {
+      margin-top: 12px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <div class="counter-box">
+    <h2>Live Character Counter</h2>
+    <textarea id="message" placeholder="Start typing..."></textarea>
+    <p class="char-count">Characters: <span id="count">0</span></p>
+  </div>
+
+  <script>
+    
+    const messageBox = document.getElementById("message");
+    const countDisplay = document.getElementById("count");
+
+    
+    messageBox.addEventListener("input", () => {
+      countDisplay.textContent = messageBox.value.length;
+    });
+  </script>
+
+</body>
+</html>
